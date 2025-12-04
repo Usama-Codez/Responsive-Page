@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section</title>
+    <script
+      src="https://kit.fontawesome.com/9b197449cc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="dark:bg-black dark:text-white text-[#292929] overflow-x-hidden">
+    <div
+      class="max-w-[1728px] min-w-[320px] mx-auto flex flex-col xxl:gap-[60px] 2xl:gap-[30px] gap-[20px]"
+    >
+      <header
+        class="xxl:h-[120px] md:h-[100px] h-[120px] paddings xxl:pt-[50px] xxl:pb-[30px] flex items-center justify-between md:bg-transparent dark:bg-[#0B0B0B]"
+      >
+        <div class="brand flex gap-[5px]">
+          <img
+            src="./assets/images/logo-dark.png"
+            alt="Tian Logo Dark"
+            class="w-[26.2px] h-[26.2px] dark:inline-block hidden"
+          />
+          <img
+            src="./assets/images/logo-light.png"
+            alt="Tian Logo Light"
+            class="w-[26.2px] h-[26.2px] dark:hidden inline-block"
+          />
+          <span class="text-xl font-bold font-poppins">tian</span>
+        </div>
+        <ul class="md:flex hidden items-center gap-[30px]" id="desktopNav">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="http://usamaakram.netlify.app">Portfolio</a></li>
+          <li><a href="http://usamaakram.netlify.app">Skills</a></li>
+          <li><a href="http://usamaakram.netlify.app">About Me</a></li>
+        </ul>
+        <div class="md:flex hidden items-center gap-5">
+          <div
+            class="w-14 rounded-[32px] flex gap-1 p-1 h-8 bg-[#051724] dark:bg-[#FFEC70] items-center justify-between cursor-pointer"
+            id="themeToggler"
+          >
+            <div class="flex items-center justify-center" id="sun">
+              <img src="./assets/images/theme-sun.png" alt="Light Mode" />
+            </div>
+            <div class="otherMode flex items-center justify-center" id="moon">
+              <img
+                src="./assets/images/theme-moon.png"
+                alt="Dark Mode"
+                class="w-5 h-5 hidden"
+              />
+            </div>
+          </div>
+          <a class="inline-block btn" href="https://usamaakram.netlify.app/"
+            >Contact Me</a
+          >
+        </div>
+
+        <!-- Menu Button -->
+        <div
+          class="md:hidden w-12 h-12 rounded-lg bg-[#292929] dark:bg-[#925ff0] flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300"
+          id="toggleBtn"
+        >
+          <i class="fa-solid fa-bars text-2xl cursor-pointer text-white"></i>
+        </div>
+      </header>
+
+      <section
+        id="sidebar"
+        class="fixed top-0 right-0 z-40 bg-gradient-to-bl from-white/60 via-white/50 to-white/70 dark:from-black/60 dark:via-black/50 dark:to-black/70 backdrop-blur-2xl w-[260px] h-screen pl-8 pr-5 rounded-l-3xl py-8 transition-all duration-700 ease-in-out md:hidden block transform translate-x-full border-l border-[#292929]/20 dark:border-[#925ff0]/40 shadow-[0_0_80px_rgba(0,0,0,0.3)] dark:shadow-[0_0_80px_rgba(146,95,240,0.3)]"
+      >
+        <div>
+          <div
+            class="closeSidebar mt-2 w-10 h-10 rounded-full bg-gradient-to-br from-[#292929] to-[#444] dark:from-[#925ff0] dark:to-[#b580ff] flex items-center justify-center cursor-pointer hover:rotate-180 hover:scale-110 transition-all duration-500 shadow-lg hover:shadow-[0_0_20px_rgba(146,95,240,0.6)]"
+          >
+            <i class="fa-solid fa-xmark text-2xl cursor-pointer text-white"></i>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <ul
+          class="md:hidden flex flex-col mt-16 gap-[30px] dark:text-white text-[#292929] font-semibold text-xl tracking-tight"
+          id="mobileNav"
+        >
+          <li
+            class="hover:translate-x-3 transition-all duration-300 opacity-0 animate-slideIn active"
+            style="animation-delay: 0.1s"
+          >
+            <a href="#" class="flex items-center gap-3">
+              <span
+                class="w-6 h-[2px] bg-gradient-to-r from-[#fa709a] to-[#fee140] transition-all duration-300 group-hover:w-6"
+              ></span>
+              Home
+            </a>
+          </li>
+          <li
+            class="hover:translate-x-3 transition-all duration-300 opacity-0 animate-slideIn"
+            style="animation-delay: 0.2s"
+          >
+            <a
+              href="http://usamaakram.netlify.app"
+              class="flex items-center gap-3"
+            >
+              <span
+                class="w-0 h-[2px] bg-gradient-to-r from-[#fa709a] to-[#fee140] transition-all duration-300 group-hover:w-6"
+              ></span>
+              Portfolio
+            </a>
+          </li>
+          <li
+            class="hover:translate-x-3 transition-all duration-300 opacity-0 animate-slideIn"
+            style="animation-delay: 0.3s"
+          >
+            <a
+              href="http://usamaakram.netlify.app"
+              class="flex items-center gap-3"
+            >
+              <span
+                class="w-0 h-[2px] bg-gradient-to-r from-[#fa709a] to-[#fee140] transition-all duration-300 group-hover:w-6"
+              ></span>
+              Skills
+            </a>
+          </li>
+          <li
+            class="hover:translate-x-3 transition-all duration-300 opacity-0 animate-slideIn"
+            style="animation-delay: 0.4s"
+          >
+            <a
+              href="http://usamaakram.netlify.app"
+              class="flex items-center gap-3"
+            >
+              <span
+                class="w-0 h-[2px] bg-gradient-to-r from-[#fa709a] to-[#fee140] transition-all duration-300 group-hover:w-6"
+              ></span>
+              About Me
+            </a>
+          </li>
+        </ul>
+
+        <div class="flex items-start flex-col gap-6 mt-8">
+          <div
+            class="w-14 rounded-[32px] flex gap-1 p-1 h-8 bg-[#051724] dark:bg-[#FFEC70] items-center justify-between cursor-pointer"
+            id="themeToggler1"
+          >
+            <div class="flex items-center justify-center" id="sun1">
+              <img src="./assets/images/theme-sun.png" alt="Light Mode" />
+            </div>
+            <div class="otherMode flex items-center justify-center" id="moon1">
+              <img
+                src="./assets/images/theme-moon.png"
+                alt="Dark Mode"
+                class="w-5 h-5 hidden"
+              />
+            </div>
+          </div>
+          <a class="inline-block btn" href="https://usamaakram.netlify.app/"
+            >Contact Me</a
+          >
+        </div>
+      </section>
+
+      <section
+        class="flex items-center lg:justify-between justify-center paddings 2xl:gap-5 gap-2 py-5 lg:min-h-fit min-h-screen"
+      >
+        <div class="left xxl:w-[840px] xxl:h-[695px] flex">
+          <div class="flex flex-col 2xl:gap-[70px] md:gap-10 gap-[70px]">
+            <div class="flex flex-col 2xl:gap-[18px] gap-3">
+              <div class="xxl:w-[700px] 2xl:w-[600px]">
+                <h1
+                  class="xxl:text-[200px] 2xl:text-[170px] xl:text-[160px] lg:text-[130px] md:text-[200px] sm:text-[110px] text-[90px] leading-[90%] tracking-[-3%] font-anton md:text-left text-center"
+                >
+                  PRODUCT
+                </h1>
+                <h1
+                  class="xxl:text-[200px] 2xl:text-[170px] xl:text-[160px] lg:text-[130px] md:text-[200px] sm:text-[110px] text-[90px] leading-[90%] tracking-[-3%] font-anton md:text-left text-center"
+                >
+                  DESIGNER
+                </h1>
+              </div>
+              <h2
+                class="custom-text font-anton xxl:text-[112px] 2xl:text-[97px] xl:text-[88px] lg:text-[74px] md:text-[112px] sm:text-[64px] text-[50px] leading-[90%] tracking-[-3%] md:text-left text-center"
+              >
+                CRISTIAN MUÑOZ
+              </h2>
+            </div>
+            <div class="xxl:w-[700px] 2xl:w-[600px] flex flex-col gap-10">
+              <div
+                class="w-full flex items-center justify-between"
+                id="social-links"
+              >
+                <!-- Instagram -->
+                <a
+                  class="sm:h-[52px] sm:w-[52px] w-10 h-10 border dark:border-white border-[#E6E6E6] rounded-[10px] inline-flex sm:p-0 p-1 items-center justify-center"
+                  href="https://www.instagram.com/h7_usama/"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
+                  <img
+                    src="./assets/images/social-instagram-dark.png"
+                    alt="Instagram"
+                    class="dark:inline-block hidden"
+                  />
+                  <img
+                    src="./assets/images/social-instagram-light.png"
+                    alt="Instagram"
+                    class="dark:hidden inline-block"
+                  />
+                </a>
+
+                <!-- Figma -->
+                <a
+                  class="sm:h-[52px] sm:w-[52px] w-10 h-10 border dark:border-white border-[#E6E6E6] rounded-[10px] inline-flex sm:p-0 p-1 items-center justify-center"
+                  href="https://www.figma.com/"
+                  target="_blank"
+                  aria-label="Figma"
+                >
+                  <img
+                    src="./assets/images/social-figma-dark.png"
+                    alt="Figma"
+                    class="dark:inline-block hidden"
+                  />
+                  <img
+                    src="./assets/images/social-figma-light.png"
+                    alt="Figma"
+                    class="dark:hidden inline-block"
+                  />
+                </a>
+
+                <!-- Linkedin -->
+                <a
+                  class="sm:h-[52px] sm:w-[52px] w-10 h-10 border dark:border-white border-[#E6E6E6] rounded-[10px] inline-flex sm:p-0 p-1 items-center justify-center"
+                  href="https://www.linkedin.com/in/usama-codez"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
+                  <img
+                    src="./assets/images/social-linkedin-dark.png"
+                    alt="LinkedIn"
+                    class="dark:inline-block hidden"
+                  />
+                  <img
+                    src="./assets/images/social-linkedin-light.png"
+                    alt="LinkedIn"
+                    class="dark:hidden inline-block"
+                  />
+                </a>
+
+                <!-- Twitter -->
+                <a
+                  class="sm:h-[52px] sm:w-[52px] w-10 h-10 border dark:border-white border-[#E6E6E6] rounded-[10px] inline-flex sm:p-0 p-1 items-center justify-center"
+                  href="https://x.com/"
+                  target="_blank"
+                  aria-label="Twitter"
+                >
+                  <img
+                    src="./assets/images/social-twitter-dark.png"
+                    alt="Twitter"
+                    class="dark:inline-block hidden"
+                  />
+                  <img
+                    src="./assets/images/social-twitter-light.png"
+                    alt="Twitter"
+                    class="dark:hidden inline-block"
+                  />
+                </a>
+
+                <!-- Telegram -->
+                <a
+                  class="sm:h-[52px] sm:w-[52px] w-10 h-10 border dark:border-white border-[#E6E6E6] rounded-[10px] inline-flex sm:p-0 p-1 items-center justify-center"
+                  href="https://telegram.org/"
+                  target="_blank"
+                  aria-label="Telegram"
+                >
+                  <img
+                    src="./assets/images/social-telegram-dark.png"
+                    alt="Telegram"
+                    class="dark:inline-block hidden"
+                  />
+                  <img
+                    src="./assets/images/social-telegram-light.png"
+                    alt="Telegram"
+                    class="dark:hidden inline-block"
+                  />
+                </a>
+
+                <!-- Medium -->
+                <a
+                  class="sm:h-[52px] sm:w-[52px] w-10 h-10 border dark:border-white border-[#E6E6E6] rounded-[10px] sm:p-0 p-1 inline-flex items-center justify-center"
+                  href="https://medium.com/@usamacodez"
+                  target="_blank"
+                  aria-label="Medium"
+                >
+                  <img
+                    src="./assets/images/social-medium-dark.png"
+                    alt="Medium"
+                    class="dark:inline-block hidden"
+                  />
+                  <img
+                    src="./assets/images/social-medium-light.png"
+                    alt="Medium"
+                    class="dark:hidden inline-block"
+                  />
+                </a>
+              </div>
+
+              <a
+                class="w-full h-[52px] pl-8 pr-6 py-4 inline-flex items-center gap-2 justify-center bg-[#292929] text-white rounded-md transition-all duration-300 hover:gap-4 hover:pr-4 hover:scale-[1.02]"
+                id="downloadBtn"
+                href="https://usamaakram.netlify.app"
+                target="_blank"
+              >
+                Download Curriculum Vitae
+                <img
+                  src="./assets/images/icon-arrow-right.png"
+                  alt="Arrow"
+                  class="w-5 h-5"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            class="2xl:max-w-[160px] 2xl:max-h-[160px] max-w-[130px] max-h-[130px] -ml-3 lg:block hidden"
+          >
+            <img
+              src="./assets/images/icon-star-portal.png"
+              alt="Star Portal"
+              class="h-full w-full"
+            />
+          </div>
+        </div>
+        <div class="right lg:block hidden">
+          <img
+            src="./assets/images/hero-main.jpg"
+            alt="Hero Image"
+            class="xxl:w-[694px] xxl:h-[778px] 2xl:w-[650px] 2xl:h-[700px] xl:w-[570px] xl:h-[640px] w-[500px] h-[600px] object-cover"
+          />
+        </div>
+      </section>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

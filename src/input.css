@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@import "tailwindcss";
+
+@config "./tailwind.config.js";
+
+.custom-shadow {
+  box-shadow: 0px 0px 8px #292929;
+}
+
+.custom-shadow-dark {
+  box-shadow: 0px 0px 8px #925ff0;
+}
+
+/* Mobile Navigation Styles */
+#mobileNav {
+  font-family: "Montserrat", sans-serif;
+}
+
+#mobileNav li {
+  position: relative;
+  padding-left: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobileNav li:hover {
+  padding-left: 1rem;
+}
+
+#mobileNav li.active {
+  padding-left: 1rem;
+}
+
+#mobileNav a {
+  position: relative;
+  display: block;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#mobileNav li.active a {
+  background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#mobileNav a::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+#mobileNav li.active a::before {
+  width: 30px;
+}
+
+#mobileNav li:hover a::before {
+  width: 30px;
+}
+
+#mobileNav a:hover {
+  background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.05);
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.6s ease forwards;
+}
+
+/* Sidebar Backdrop Effect */
+#sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(146, 95, 240, 0.1),
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+html.dark #sidebar::before {
+  opacity: 1;
+}
+
+html:not(.dark) #sidebar::before {
+  background: radial-gradient(
+    circle at top right,
+    rgba(41, 41, 41, 0.05),
+    transparent 70%
+  );
+}
+
+.paddings {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media (min-width: 1024px) {
+  .paddings {
+    padding-left: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .paddings {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .paddings {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+
+@media (min-width: 1728px) {
+  .paddings {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+#social-links a {
+  transform: translateY(0);
+  transition: all 0.15s ease-in-out;
+}
+
+#social-links a:hover {
+  transform: translateY(-8px);
+}
+
+#desktopNav li a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  letter-spacing: -0.05em;
+}
+
+@media (min-width: 1536px) {
+  #desktopNav li a {
+    font-size: 1.25rem;
+  }
+}
+
+#desktopNav li a:hover {
+  border-bottom: 1px solid;
+}
+
+#desktopNav li a.active {
+  border-bottom: 1px solid;
+}
+
+html.dark #desktopNav li a:hover {
+  border-color: white;
+}
+
+html:not(.dark) #desktopNav li a:hover {
+  border-color: black;
+}
+
+html.dark #desktopNav li a.active {
+  border-color: white;
+}
+
+html:not(.dark) #desktopNav li a.active {
+  border-color: black;
+}
+
+.btn {
+  background-color: #292929;
+  width: 133px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+html.dark .btn {
+  background-color: #925ff0;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 8px #292929;
+}
+
+html.dark .btn:hover {
+  box-shadow: 0px 0px 8px #925ff0;
+}
+
+.otherMode {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: #fffded;
+}
+
+#downloadBtn {
+  position: relative;
+  overflow: hidden;
+}
+
+#downloadBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+#downloadBtn:hover::before {
+  left: 100%;
+}
+
+#downloadBtn:hover {
+  box-shadow: 0px 0px 16px #292929;
+}
+
+html.dark #downloadBtn:hover {
+  box-shadow: 0px 0px 16px #925ff0;
+}
+
+#downloadBtn img {
+  transition: transform 0.3s ease;
+}
+
+#downloadBtn:hover img {
+  transform: translateX(4px);
+}
+
+.custom-text {
+  background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
